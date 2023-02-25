@@ -47,7 +47,7 @@ public class Lig {
 
 				fikstur[sayi][0] = getTakimListesi()[i];
 				fikstur[sayi][1] = getTakimListesi()[j];
-				System.out.println(i+1+". hafta karşılaşması == "+sayi+getTakimListesi()[i].getName()+"----"+getTakimListesi()[j].getName());
+				System.out.println(i+1+". hafta karşılaşması == "+(sayi+1)+getTakimListesi()[i].getName()+"----"+getTakimListesi()[j].getName());
 				sayi++;
 
 			}
@@ -58,7 +58,7 @@ public class Lig {
 
 	}
 
-	public void maclaraBasla() {
+	public void maclaraBasla() throws InterruptedException {
 		Random random = new Random();
 		
 		for (int i = 0; i < getFikstur().length; i++) {
@@ -78,6 +78,8 @@ public class Lig {
 				getFikstur()[i][1].setKasa(getFikstur()[i][1].getKasa()+5000);
 				getFikstur()[i][1].setBerabere(getFikstur()[i][1].getBerabere()+1);
 				getFikstur()[i][0].setBerabere(getFikstur()[i][0].getBerabere()+1);
+				System.out.println(getFikstur()[i][0].getName()+"--"+getFikstur()[i][1].getName()+" maçını berabere bitmiştir ");
+				
 			}
 
 		}

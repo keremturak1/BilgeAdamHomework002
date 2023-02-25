@@ -3,7 +3,7 @@ package com.keremturak;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		
 		Takim takim1 = new Takim("Real Madrid");
@@ -30,9 +30,17 @@ public class Main {
 		Lig lig = new Lig(takimListesi);
 		FinansalDurum finansaldurum = new FinansalDurum();
 		lig.fiksturOlustur();
+		Thread.sleep(1000);
 		lig.maclaraBasla();
+		Thread.sleep(1000);
+		System.out.println();
 		lig.ligTablosunuGetir();
+		
+		System.out.println();
+		Thread.sleep(1000);
 		finansaldurum.iflasDurumundakiler(takimListesi);
+		Thread.sleep(1000);
+		System.out.println();
 		lig.basariliTakimlariGöster();
 		
 		
